@@ -1,18 +1,40 @@
-// COMPOSICIÓN
+
+export interface Rol {
+  rol(): string;
+
+}
+
+export class Ingeniero implements Rol {
+  rol(): string {
+    return 'desarrollador software';
+  }
+
+}
+
+export class Youtuber implements Rol {
+  rol(): string {
+    return 'creandor de contenido para YouTube';
+  }
+
+}
+
 export class Persona {
-  // TU CÓDIGO VA AQUI, NO MODIFIQUES EL NOMBRE DEL ARCHIVO
-  // NI TAMPOCO LOS TESTS NI TAMPOCO EL NOMBRE DE LA CLASE
-  // PORQUE NO FUNCIONARÁ
+  private rol: Rol;
+
+  constructor(rol: Rol ) {
+    this.rol = rol
+    
+  }
+
+  get getRol(): string {
+    return `La persona es ${this.rol.rol()}`
+  }
+
 }
 
-export class Ingeniero {
-  // TU CÓDIGO VA AQUI, NO MODIFIQUES EL NOMBRE DEL ARCHIVO
-  // NI TAMPOCO LOS TESTS NI TAMPOCO EL NOMBRE DE LA CLASE
-  // PORQUE NO FUNCIONARÁ
-}
+const rol = new Youtuber();
 
-export class Youtuber {
-  // TU CÓDIGO VA AQUI, NO MODIFIQUES EL NOMBRE DEL ARCHIVO
-  // NI TAMPOCO LOS TESTS NI TAMPOCO EL NOMBRE DE LA CLASE
-  // PORQUE NO FUNCIONARÁ
-}
+const persona = new Persona(rol);
+
+console.log(persona.getRol)
+

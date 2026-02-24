@@ -3,16 +3,16 @@ import { Ingeniero } from "../src/ejercicio-6-tipos-de-metodos";
 
 describe("Clase Ingeniero", () => {
   it("debería crear una instancia correctamente", () => {
-    const ing = new Ingeniero("Yari", 30, 3334, 40);
+    const ing = new Ingeniero("Angel", 30, 3334, 40);
     expect(ing).toBeInstanceOf(Ingeniero);
-    expect(ing.nombre).toBe("Yari");
+    expect(ing.nombre).toBe("Angel");
     expect(ing.matricula).toBe(3334);
   });
 
   it("debería saludar con override de método", () => {
-    const ing = new Ingeniero("Ana", 28, 5555, 30);
+    const ing = new Ingeniero("Angel", 28, 5555, 30);
     expect(ing.saludar()).toBe(
-      "Hola, soy el Ingeniero Ana y tengo 28 años. Mi numero de matricula es 5555"
+      "Hola, soy el Ingeniero Angel y tengo 28 años. Mi numero de matricula es 5555"
     );
   });
 

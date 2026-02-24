@@ -1,5 +1,21 @@
 export class Persona {
-  // TU CÓDIGO VA AQUI, NO MODIFIQUES EL NOMBRE DEL ARCHIVO
-  // NI TAMPOCO LOS TESTS NI TAMPOCO EL NOMBRE DE LA CLASE
-  // PORQUE NO FUNCIONARÁ
+  nombre: string;
+  edad: number;
+
+  constructor(nombre:string, edad: number){
+    this.nombre = nombre;
+    this.edad = edad;
+  }
+
+  saludar(): string {
+    return `Hola, soy ${this.nombre} y tengo ${this.edad} años.`
+  }
+
 }
+
+const persona = new Persona('Angel', 44);
+
+console.log(persona.nombre);
+console.log(persona.edad);
+
+console.log(persona.saludar())

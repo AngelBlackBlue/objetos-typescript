@@ -2,14 +2,14 @@ import { Ingeniero, IngenieroSobreescrito } from "../src/ejercicio-3-herencia";
 
 describe("Ingeniero", () => {
   it("debería crear una persona con nombre y edad correctos", () => {
-    const ingeniero = new Ingeniero("Yari", 30, 3344);
+    const ingeniero = new Ingeniero("Angel", 30, 3344);
 
-    expect(ingeniero.nombre).toBe("Yari");
+    expect(ingeniero.nombre).toBe("Angel");
   });
 
   it("debería saludar profesionalmente y comunmente", () => {
     const datosIngeniero = {
-      nombre: "Yari",
+      nombre: "Angel",
       edad: 30,
       matricula: 3344,
     };
@@ -30,15 +30,15 @@ describe("Ingeniero", () => {
 
 describe("Ingeniero Sobreescrito", () => {
   it("debería crear una persona con nombre y edad correctos", () => {
-    const ingeniero = new IngenieroSobreescrito("Yari", 30, 3344);
+    const ingeniero = new IngenieroSobreescrito("Angel", 30, 3344);
 
-    expect(ingeniero.nombre).toBe("Yari");
+    expect(ingeniero.nombre).toBe("Angel");
     expect(ingeniero.matricula).toBe(3344);
   });
 
   it("debería saludar profesionalmente y comunmente", () => {
     const datosIngeniero = {
-      nombre: "Yari",
+      nombre: "Angel",
       edad: 30,
       matricula: 3344,
     };

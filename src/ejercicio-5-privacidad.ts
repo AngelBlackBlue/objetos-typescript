@@ -43,6 +43,8 @@ export class Ingeniero extends Persona {
   }
 }
 
-const profesional = new Ingeniero("Yari", 30, 3334, 40);
+const profesional = new Ingeniero("Angel", 30, 3334, 40);
 console.log(profesional.getEdad());
-// console.log(profesional.);
+
+console.log((profesional as any).horasTrabajadas) // hackeable
+
